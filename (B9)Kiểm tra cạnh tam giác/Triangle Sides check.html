@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra cạnh</title>
+</head>
+<body onload="Triangle()">
+<script>
+    function Triangle()
+    {
+        let a, b, c;
+        do
+        {
+            a = +prompt("nhap canh a");
+            if(a < 0)
+            {
+                alert("nhap lai > 0");
+            }
+        }
+            while(a < 0);
+        do
+        {
+            b = +prompt("nhap canh b");
+            if(b < 0)
+            {
+                alert("nhap lai > 0");
+            }
+        }
+            while(b < 0);
+        do
+        {
+            c = +prompt("nhap canh c");
+            if(c < 0)
+            {
+                alert("nhap lai > 0");
+            }
+        }
+            while(c < 0);
+
+        if((a + b) > c)
+        {
+            if((a + c) > b)
+            {
+                if((b + c) > a)
+                {
+                    alert("a, b, c la 3 canh 1 tam giac");
+                }
+
+                else
+                {
+                    alert("a, b, c khong la 3 canh 1 tam giac");
+                }
+            }
+
+            else
+            {
+                alert("a, b, c khong la 3 canh 1 tam giac");
+            }
+        }
+        else
+        {
+            alert("a, b, c khong la 3 canh 1 tam giac");
+        }
+
+
+
+
+
+    }
+</script>
+</body>
+</html>

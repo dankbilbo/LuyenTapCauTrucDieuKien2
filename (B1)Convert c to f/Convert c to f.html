@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển nhiệt độ</title>
+</head>
+<body onload="convert()">
+<p id="result"></p>
+<script>
+    function convert()
+    {
+        let c = +prompt("Nhập độ C");
+        document.getElementById("result").innerHTML = "Độ F là : " + (9 * c / 5 + 32);
+    }
+</script>
+</body>
+</html>

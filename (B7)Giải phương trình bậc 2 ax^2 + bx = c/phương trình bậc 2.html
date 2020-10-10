@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>phương trình bâc 2 ax^2 + bx = c</title>
+</head>
+<body onload="solvePTBac2()">
+<script>
+function solvePTBac2()
+{
+    let a = +prompt("nhap a");
+    let b = +prompt("nhap b");
+    let c = +prompt("nhap c");
+    if(a == 0)
+    {
+        if(b == 0)
+        {
+            if(c == 0)
+            {
+                alert("pt vo so nghiem");
+            }
+            else
+                {
+                    alert("vo nghiem");
+                }
+        }
+        else
+            {
+                alert("pt co nghiem la " + (-c) / b);
+            }
+    }
+    else
+        {
+            let delta = b ** 2 - 4 * a * c;
+            if(delta < 0)
+            {
+                alert("pt vo nghiem");
+            }
+            else if(delta == 0)
+            {
+                alert("pt co 2 nghiem kep x1 = x2 = " + (-b) / 2 * a);
+            }
+            else
+                {
+                    alert("pt co 2 nghiem x1 = " + (-b + Math.sqrt(delta)/ (2 * a)).toFixed(2) + " x2 = " + (-b - Math.sqrt(delta)/ (2 * a)).toFixed(2));
+                }
+        }
+}
+</script>
+</body>
+</html>

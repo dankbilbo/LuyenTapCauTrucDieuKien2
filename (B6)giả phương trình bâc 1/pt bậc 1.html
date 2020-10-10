@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giải phương trình bậc 1</title>
+</head>
+<body onload="solvePTBac1()">
+<script>
+    function solvePTBac1()
+    {
+        let a = +prompt("nhap a");
+        let b = +prompt("nhap b");
+        a == 0 ? (b == 0 ? alert("pt vo so nghiem ") : alert("pt vo nghiem")) : alert("pt co nghiem " + (-b) / a);
+    }
+</script>
+</body>
+</html>

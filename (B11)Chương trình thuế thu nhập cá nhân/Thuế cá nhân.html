@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thuế cá nhân</title>
+</head>
+<body onload="calPersonalTaxes()">
+<script>
+    function calPersonalTaxes()
+    {
+        var earning;
+        do {
+            var earning = +prompt("Nhập thu nhap ca nhan");
+            if(earning < 0)
+            {
+                alert("nhap lai");
+            }
+        }
+        while(earning < 0);
+        if(earning < 5000000)
+        {
+            alert("tien thue la " + 5 / 100 * earning);
+        }
+        else if(earning < 10000000)
+        {
+            alert("tien thue la " + (10 / 100 * earning - 250000));
+        }
+        else if(earning < 18000000)
+        {
+            alert("tien thue la " + (15 / 100 * earning - 750000));
+        }
+        else if(earning < 32000000)
+        {
+            alert("tien thue la " + (20 / 100 * earning - 1650000));
+        }
+        else if(earning < 52000000)
+        {
+            alert("tien thue la " + (25 / 100 * earning - 3250000));
+        }
+        else if(earning < 80000000)
+        {
+            alert("tien thue la " + (30 / 100 * earning - 5850000));
+        }
+        else
+            {
+                alert("tien thue la " + (35 / 100 * earning - 9850000));
+            }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lãi ngân hàng</title>
+</head>
+<body onload="checkProfit()">
+<script>
+    function checkProfit()
+    {
+        let amount = +prompt("nhap so tien gui");
+        let day = +prompt("nhap so ngay gui");
+        if(day > 0)
+        {
+            amount = amount + amount * 0.1 / 100;
+        }
+        if(day > 7)
+        {
+            amount = amount + amount * 0.2 / 100;
+        }
+        if(day > 14)
+        {
+            amount = amount + amount * 0.2 / 100;
+        }
+        if(day > 30)
+        {
+            amount = amount + amount * 3.1 / 100;
+        }
+        if(day > 60)
+        {
+            amount = amount + amount * 3.4 / 100;
+        }
+        alert("so tien cua ban la :" + amount);
+    }
+</script>
+</body>
+</html>
